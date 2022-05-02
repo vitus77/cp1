@@ -1,0 +1,20 @@
+<html>
+   <body>
+       <div style="margin: 0 auto; width: 90%">
+            <br><h1>차량 번호 인식</h1><br><br>
+            <form action = "http://180.229.221.25:5432" method = "POST" 
+                enctype = "multipart/form-data">
+                <input type = "file" name = "file" />
+                <input type = "submit"/>
+                
+                <br><br>
+                {% if result %}
+                <img src="{{ url_for('static', filename = 'test.jpg') }}" style="width: auto; height: 500px">
+                <h1>번호 인식: {{result}}</h1>
+                {% endif %}
+                </style>
+            </form>
+       </div>
+     
+   </body>
+</html>
